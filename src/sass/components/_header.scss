@@ -1,0 +1,119 @@
+.header {
+    height: $header-height;
+    width: 100%;
+    padding: 0px 50px;
+    background-color: $main-color;
+    position: fixed;
+    top: 0;
+    color: white;
+    z-index: 100;
+
+    @include flex(center, space-between);
+
+    &__left {
+        height: 100%;
+        width: 20%;
+
+        @include flex(center, flex-start);
+
+        &__callButton {
+            background-color: white;
+            border-radius: 50%;
+            padding: 10px;
+            width: 50px;
+            height: 50px;
+
+            img {
+                width: 32px;
+            }
+        }
+
+        &__text {
+            margin-left: 20px;
+
+            .text:first-child {
+                padding-bottom: 5px;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .text:last-child {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__center {
+        height: 100%;
+        width: 60%;
+
+        &__list {
+            padding: 0;
+
+            @include flex(center, center);
+
+            :hover {
+                cursor: pointer;
+            }
+
+            &__item {
+                margin: 22px;
+                font-weight: 500;
+                font-size: 16px;
+            }
+
+            &__logo {
+                img {
+                    width: 160px;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+
+    &__right {
+        height: 100%;
+        width: 20%;
+
+        @include flex(center, flex-end);
+
+        &__cart {
+            position: relative;
+
+            :hover {
+                cursor: pointer;
+            }
+
+            img {
+                width: 30px;
+            }
+        }
+
+        &__counter {
+            position: absolute;
+            top: 25px;
+            right: 100px;
+            width: 22px;
+            height: 22px;
+            background-color: white;
+            color: #000;
+            border-radius: 50%;
+            font-weight: bold;
+            color: $main-color;
+            font-size: 16px;
+
+            @include flex(center, center);
+        }
+
+        &__login {
+            margin-left: 40px;
+            font-size: 25px;
+            font-weight: 500;
+
+            :hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
