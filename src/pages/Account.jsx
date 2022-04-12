@@ -10,6 +10,8 @@ import { AccountContext } from "../components/AccountBox/context";
 const Account = () => {
   const [active, setActive] = useState("login");
 
+  window.scroll(0, 0);
+
   const switchToSignup = () => {
     setActive("signup");
   };
