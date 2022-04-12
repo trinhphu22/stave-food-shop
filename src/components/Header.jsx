@@ -22,8 +22,8 @@ const Header = () => {
         <div className="header__center">
           <ul className="header__center__list">
             <Link to={"/"} className="header__center__list__item">Homepage</Link>
-            <Link to={"/menu"} className="header__center__list__item">Products</Link>
-            <li className="header__center__list__item">Menu</li>
+            <Link to={`/product/?id=1`}  className="header__center__list__item">Products</Link>
+            <Link to={"/menu"} className="header__center__list__item">Menu</Link>
             <Link to={"/"} className="header__center__list__logo">
               <img src={Logo} alt="" />
             </Link>
