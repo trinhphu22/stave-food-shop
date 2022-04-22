@@ -1,0 +1,81 @@
+.cart {
+    min-height: calc(100vh - $header-height);
+    margin-top: $header-height;
+    padding: 50px;
+    font-size: 1.4rem;
+    // box-shadow: $box-shadow;
+
+    @include flex(flex-start, space-between);
+
+    &__left {
+        flex: 2;
+
+        .table {
+            width: 100%;
+            border-spacing: 20px;
+            text-align: center;
+
+            &__name {
+                text-transform: uppercase;
+                font-weight: 500;
+                color: $main-color;
+
+            }
+
+            &__extras {
+                text-transform: capitalize;
+                text-align: left;
+                line-height: 25px;
+            }
+
+            &__total {
+                font-weight: 500;
+            }
+            
+        }
+
+        img {
+            width: 130px;
+            height: 130px;
+        }
+    }
+    &__right {
+        flex: 1;
+
+        @include flex(flex-start, flex-end);
+
+        &__card {
+            width: 90%;
+            max-height: 300px;
+            padding: 50px;
+            background: #333;
+            color: #fff;
+
+            &__title {
+                margin-bottom: 20px;
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            &__text {
+                
+                .texttitle {
+                    margin-right: 5px;
+                }
+            }
+
+            &__button {
+                width: 100%;
+                height: 35px;
+                margin-top: 20px;
+                font-weight: bold;
+                color: $main-color;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                cursor: pointer;
+                box-shadow: $box-shadow;
+            }
+        }
+    }
+}

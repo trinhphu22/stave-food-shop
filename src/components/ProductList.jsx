@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import ProductCard from "./ProductCard";
 
@@ -18,9 +19,9 @@ const ProductList = () => {
         <ProductCard />
       </div>
       <div className="button-box">
-        <div class="btn btn--border btn--primary btn--animated">
+        <Link to={"/menu"} class="btn btn--border btn--primary btn--animated">
           view all products
-        </div>
+        </Link>
       </div>
     </div>
   );

@@ -1,0 +1,110 @@
+.menu {
+    min-height: calc(100vh - $header-height);
+    margin-top: $header-height;
+    // padding: 50px;
+    flex-direction: column;
+
+    @include flex(center, flex-start);
+
+    &__text {
+        margin-top: 50px;
+        font-size: 2rem;
+        font-weight: bold;
+        color: coral;
+        font-family: "M PLUS Rounded 1c", sans-serif;
+    }
+
+    &__title {
+        margin-top: 1rem;
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #444;
+    }
+
+    &__select {
+        width: 95%;
+        margin-top: 50px;
+        padding: 0 10px;
+
+        @include flex(flex-start, space-between);
+
+        &__flaticon {
+            width: 250px;
+            height: 160px;
+            border: 2px solid #aaaaaa;
+            flex-direction: column;
+            box-shadow: $box-shadow;
+            cursor: pointer;
+
+            @include flex(center, center);
+
+            .text {
+                text-transform: capitalize;
+                font-size: 1.7rem;
+                margin-top: 20px;
+                font-weight: bold;
+            }
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+    }
+
+    &__items {
+        width: 95%;
+        margin: 50px 0; 
+        padding: 0 10px;
+
+        @include flex(flex-start, space-between);
+
+        &__left {
+            flex: 1;
+            min-height: 300px;
+            border: 3px dotted #aaaaaa;
+            margin-right: 20px;
+        }
+
+        &__right {
+            flex: 1;
+            min-height: 300px;
+            border: 3px dotted #aaaaaa;
+        }
+
+        &__item {
+            padding: 20px;
+            // margin-bottom: 50px;
+
+            .contents {
+                font-size: 2rem;
+                font-weight: bold;
+
+                .dot {
+                    padding: 0 10px;
+                    color: #aaaaaa;
+                }
+
+                .price {
+                    color: $main-color;
+                }
+
+                &:hover {
+                    color: $main-color;
+                    cursor: pointer;
+
+                    .dot {
+                        color: $main-color;
+                    }
+                }
+            }
+
+            .disc {
+                margin-top: 15px;
+                font-size: 1.4rem;
+                color: #777;
+            }
+        }
+    }
+}

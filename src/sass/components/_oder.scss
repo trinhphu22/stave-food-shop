@@ -1,0 +1,116 @@
+.oder {
+    min-height: calc(100vh - $header-height);
+    margin-top: $header-height;
+    padding: 50px;
+    font-size: 1.4rem;
+    // box-shadow: $box-shadow;
+
+    @include flex(flex-start, space-between);
+
+    &__left {
+        flex: 2;
+
+        .table {
+            width: 100%;
+            border-spacing: 20px;
+            text-align: left;
+
+            &__name {
+                text-transform: capitalize;
+            }
+
+            &__address {
+                text-transform: capitalize;
+                text-align: left;
+                line-height: 25px;
+            }
+
+            &__total {
+                font-weight: 500;
+            }
+            
+        }
+
+        .states {
+            margin-top: 50px;
+            margin-left: 20px;
+            width: 80%;
+
+            @include flex(flex-start, space-between);
+
+            &__done {
+                flex-direction: column;
+
+                @include flex(center, center);
+            }
+
+            &__inProgress {
+                flex-direction: column;
+                animation: inProgress 1s ease infinite alternate;
+
+                @include flex(center, center);
+
+                @keyframes inProgress {
+                    from {
+                        opacity: 0;
+                    } to {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            
+            &__undone {
+                flex-direction: column;
+                opacity: 0.3;
+
+                @include flex(center, center);
+            }
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    &__right {
+        flex: 1;
+
+        @include flex(flex-start, flex-end);
+
+        &__card {
+            width: 90%;
+            max-height: 300px;
+            padding: 50px;
+            background: #333;
+            color: #fff;
+
+            &__title {
+                margin-bottom: 20px;
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            &__text {
+                
+                .texttitle {
+                    margin-right: 5px;
+                }
+            }
+
+            &__button {
+                width: 100%;
+                height: 35px;
+                margin-top: 20px;
+                font-weight: bold;
+                color: teal;
+                background: #fff;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                box-shadow: $box-shadow;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

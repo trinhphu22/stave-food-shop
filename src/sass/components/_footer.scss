@@ -1,6 +1,7 @@
 .footer {
     background-color: #222;
     height: calc(100vh - 100px);
+    box-shadow: $box-shadow;
 
     @include flex(flex-start, flex-start);
 

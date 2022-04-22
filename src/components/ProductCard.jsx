@@ -9,7 +9,7 @@ const ProductCard = () => {
       <div className="productcard__image">
         <img src={Pizza} alt="" />
         <div className="productcard__image__button">
-          <Link className="bttn" to={"/"}>
+          <Link className="bttn" to={"/product/?id=1"}>
             ORDER ONLINE &nbsp;
             <i class="fas fa-caret-right"></i>
           </Link>

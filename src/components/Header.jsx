@@ -33,9 +33,9 @@ const Header = () => {
           </ul>
         </div>
         <div className="header__right">
-          <div className="header__right__cart">
+          <Link to={"/cart"} className="header__right__cart">
             <img src={Cart} alt="" />
-          </div>
+          </Link>
           <div className="header__right__counter">2</div>
           <Link to={"/account"} className="header__right__login">
           <i class="fal fa-user-alt"></i>
