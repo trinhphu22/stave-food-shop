@@ -37,7 +37,7 @@ const Header = () => {
             <img src={Cart} alt="" />
           </Link>
           <div className="header__right__counter">2</div>
-          <Link to={"/account"} className="header__right__login">
+          <Link to={"/login"} className="header__right__login">
           <i class="fal fa-user-alt"></i>
           </Link>
         </div>

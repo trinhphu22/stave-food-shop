@@ -3,7 +3,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 import Homepage from "../pages/Homepage";
-import Account from "../pages/Account";
+import Auth from "../pages/Auth";
 import Product from "../pages/Product";
 import Menu from "../pages/Menu";
 import Cart from "../pages/Cart";
@@ -16,7 +16,8 @@ const Routes = () => {
   return (
     <Switch>
       <Route path="/" exact component={Homepage} />
-      <Route path="/account" exact component={Account} />
+      <Route path="/login" exact render={props => <Auth {...props} authRoute="login"/>}/>
+      <Route path="/register" exact render={props => <Auth {...props} authRoute="register"/>}/>
       <Route path="/product/" component={Product} />
       <Route path="/menu" exact component={Menu} />
       <Route path="/cart" exact component={Cart} />

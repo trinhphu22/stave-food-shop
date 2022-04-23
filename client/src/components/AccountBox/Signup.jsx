@@ -7,17 +7,22 @@ const Signup = (props) => {
       <div className="account__box__body">
         <input
           type="text"
-          placeholder="Email"
+          placeholder="User name"
+          value="username"
+          required
         />
         <p className="account__box__body__message"></p>
         <input
           type="password"
           placeholder="Password"
+          value="password"
+          required
         />
         <p className="account__box__body__message"></p>
         <input
           type="password"
           placeholder="Confirm Password"
+          value="confirmPassword"
         />
         <p className="account__box__body__message">{}</p>
       </div>
