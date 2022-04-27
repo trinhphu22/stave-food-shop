@@ -5,7 +5,7 @@ import Signup from "../components/AccountBox/Signup";
 
 import Logo from "../assets/img/logo.png";
 
-import { AccountContext } from "../components/AccountBox/AuthContext";
+import { AccountContext } from "../contexts/AuthContext";
 
 const Account = ({authRoute}) => {
   const [active, setActive] = useState(authRoute);
