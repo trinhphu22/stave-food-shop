@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import classNames from "classnames";
 import Login from "../components/AccountBox/Login";
 import Signup from "../components/AccountBox/Signup";
-
 import Logo from "../assets/img/logo.png";
-
 import {AuthContext} from '../contexts/AuthContext'
+import { Redirect } from "react-router-dom";
 
 const Account = ({authRoute}) => {
+
+  const {
+		authState: { authLoading, isAuthenticated }
+	} = useContext(AuthContext)
+
   const [active, setActive] = useState(authRoute);
+
+  if (isAuthenticated) return <Redirect to='/' />
+  else <Redirect to ='/login'/>
 
   window.scroll(0, 0);
 
@@ -20,13 +27,9 @@ const Account = ({authRoute}) => {
     setActive("login");
   };
 
-  const contextValue = {
-    switchToSignup,
-    switchToLogin,
-  };
 
   return (
-    <>
+
         <div className="account">
           <div className="account__box">
             <div className="account__box__logo">
@@ -58,7 +61,7 @@ const Account = ({authRoute}) => {
             </div>
           </div>
         </div>
-    </>
+   
   );
 };
 

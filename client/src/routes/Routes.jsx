@@ -17,7 +17,6 @@ import AuthContextProvider from "../contexts/AuthContext";
 const Routes = () => {
   return (
     <AuthContextProvider>
-      <Router>
           <Switch>
           <Route path="/" exact component={Homepage} />
           <Route path="/login" exact render={props => <Auth {...props} authRoute="login"/>}/>
@@ -27,7 +26,6 @@ const Routes = () => {
           <Route path="/cart" exact component={Cart} />
           <Route path="/oder/" component={Oder} />
         </Switch>
-      </Router>
     </AuthContextProvider>
   );
 };
