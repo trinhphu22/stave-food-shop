@@ -26,7 +26,7 @@ const Account = ({authRoute}) => {
   };
 
   return (
-      <AuthContext.Provider value={contextValue}>
+    <>
         <div className="account">
           <div className="account__box">
             <div className="account__box__logo">
@@ -58,7 +58,7 @@ const Account = ({authRoute}) => {
             </div>
           </div>
         </div>
-      </AuthContext.Provider>
+    </>
   );
 };
 

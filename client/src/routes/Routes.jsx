@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Route, Switch } from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Homepage from "../pages/Homepage";
 import Auth from "../pages/Auth";
@@ -17,15 +17,17 @@ import AuthContextProvider from "../contexts/AuthContext";
 const Routes = () => {
   return (
     <AuthContextProvider>
-      <Switch>
-      <Route path="/" exact component={Homepage} />
-      <Route path="/login" exact render={props => <Auth {...props} authRoute="login"/>}/>
-      <Route path="/register" exact render={props => <Auth {...props} authRoute="register"/>}/>
-      <Route path="/product/" component={Product} />
-      <Route path="/menu" exact component={Menu} />
-      <Route path="/cart" exact component={Cart} />
-      <Route path="/oder/" component={Oder} />
-    </Switch>
+      <Router>
+          <Switch>
+          <Route path="/" exact component={Homepage} />
+          <Route path="/login" exact render={props => <Auth {...props} authRoute="login"/>}/>
+          <Route path="/register" exact render={props => <Auth {...props} authRoute="register"/>}/>
+          <Route path="/product/" component={Product} />
+          <Route path="/menu" exact component={Menu} />
+          <Route path="/cart" exact component={Cart} />
+          <Route path="/oder/" component={Oder} />
+        </Switch>
+      </Router>
     </AuthContextProvider>
   );
 };

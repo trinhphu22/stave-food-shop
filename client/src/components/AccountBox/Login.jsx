@@ -1,10 +1,12 @@
 import React from "react";
 import { useState, useContext } from "react";
 import {AuthContext} from '../../contexts/AuthContext'
-
+import {Link, useHistory} from 'react-router-dom'
 const Login = (props) => {
 
   const {loginUser} = useContext(AuthContext)
+
+  const history = useHistory()
 
   const [loginForm, setLoginForm] = useState({
     username:'',
@@ -19,6 +21,10 @@ const Login = (props) => {
     event.preventDefault()
     try{
         const loginData = await loginUser(loginForm)
+        if(loginData.success)
+        {
+          history.push('/')
+        }
         console.log(loginData)
 
     }catch(error){
@@ -50,7 +56,7 @@ const Login = (props) => {
             <p className="account__box__body__message"></p>
           </div>
           <div className="account__box__footer">
-            <button type="submit">Log In</button>
+            <button type="submit" >Log In</button>
             <a href="#a">Forgotten password?</a>
           </div>
       </form>
