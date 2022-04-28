@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 
 const authRouter = require('./routes/auth')
-const postRouter = require('./routes/post')
+
 
 const connectDB = async () => {
 	try {

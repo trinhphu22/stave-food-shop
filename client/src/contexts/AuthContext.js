@@ -1,8 +1,8 @@
 import { createContext, useReducer } from "react";
 import {authReducer} from '../reducers/authReducer'
-import { apiUrl } from "./constants";
+import { apiUrl, LOCAL_STORAGE_TOKEN_NAME } from "./constants";
 import axios from 'axios'
-export const AccountContext = createContext()
+export const AuthContext = createContext()
 
 const AuthContextProvider = ({children}) =>{
     const [authState, dispatch] = useReducer(authReducer,{

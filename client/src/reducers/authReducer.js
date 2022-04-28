@@ -1,4 +1,4 @@
-export const authReducer = (sate, action) =>{
+export const authReducer = (state, action) =>{
     const {type,payload} = action
     switch(type)
     {

@@ -5,7 +5,7 @@ import Signup from "../components/AccountBox/Signup";
 
 import Logo from "../assets/img/logo.png";
 
-import { AccountContext } from "../contexts/AuthContext";
+import {AuthContext} from '../contexts/AuthContext'
 
 const Account = ({authRoute}) => {
   const [active, setActive] = useState(authRoute);
@@ -26,7 +26,7 @@ const Account = ({authRoute}) => {
   };
 
   return (
-      <AccountContext.Provider value={contextValue}>
+      <AuthContext.Provider value={contextValue}>
         <div className="account">
           <div className="account__box">
             <div className="account__box__logo">
@@ -58,7 +58,7 @@ const Account = ({authRoute}) => {
             </div>
           </div>
         </div>
-      </AccountContext.Provider>
+      </AuthContext.Provider>
   );
 };
 
