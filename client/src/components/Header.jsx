@@ -1,12 +1,14 @@
-import React from "react";
+import React,{useContext} from "react";
 
 import { Link } from "react-router-dom";
 
 import Telephone from "../assets/img/telephone.png";
 import Logo from "../assets/img/logo.png";
 import Cart from "../assets/img/cart.png";
-
+import {AuthContext} from '../contexts/AuthContext';
 const Header = () => {
+ 
+
   return (
     <div>
       <div className="header">

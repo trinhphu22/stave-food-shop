@@ -8,7 +8,7 @@ import Product from "../pages/Product";
 import Menu from "../pages/Menu";
 import Cart from "../pages/Cart";
 import Oder from "../pages/Oder";
-
+import ProtectedRoute from "../components/routing/ProtectedRoute";
 import AuthContextProvider from "../contexts/AuthContext";
 // import Events from "../pages/Events";
 // import Blog from "../pages/Blog";
@@ -21,10 +21,10 @@ const Routes = () => {
           <Route path="/" exact component={Homepage} />
           <Route path="/login" exact render={props => <Auth {...props} authRoute="login"/>}/>
           <Route path="/register" exact render={props => <Auth {...props} authRoute="register"/>}/>
-          <Route path="/product/" component={Product} />
-          <Route path="/menu" exact component={Menu} />
-          <Route path="/cart" exact component={Cart} />
-          <Route path="/oder/" component={Oder} />
+          <ProtectedRoute path="/product/" component={Product} />
+          <ProtectedRoute path="/menu" exact component={Menu} />
+          <ProtectedRoute path="/cart" exact component={Cart} />
+          <ProtectedRoute path="/oder/" component={Oder} />
         </Switch>
     </AuthContextProvider>
   );
